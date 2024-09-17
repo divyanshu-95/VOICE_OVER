@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text and Text to Speech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Divyanshu</h1>
+
+        <h1>Speech to Text and Text to Speech</h1>
+        <textarea id="result" placeholder="Your speech will appear here or enter text to read..." rows="6" cols="50"></textarea>
+        
+        <div class="section">
+            <h2>Speech to Text</h2>
+            <button id="start-speech-to-text-btn" class="btn">Start</button>
+            <button id="stop-speech-to-text-btn" class="btn btn-danger">Stop</button>
+            <button id="clear-text-btn" class="btn btn-warning">Clear</button>
+        </div>
+
+        <div class="section">
+            <h2>Text to Speech</h2>
+            <button id="start-text-to-speech-btn" class="btn">Speak</button>
+            <button id="stop-text-to-speech-btn" class="btn btn-danger">Stop</button>
+
+            <div class="controls">
+                <label for="voice-select">Voice:</label>
+                <select id="voice-select" class="select-box"></select>
+                
+                <label for="volume-slider">Volume:</label>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1" class="slider">
+                
+                <label for="rate-slider">Rate:</label>
+                <input type="range" id="rate-slider" min="0.5" max="2" step="0.1" value="1" class="slider">
+                
+                <label for="pitch-slider">Pitch:</label>
+                <input type="range" id="pitch-slider" min="0" max="2" step="0.1" value="1" class="slider">
+            </div>
+        </div>
+
+        <p id="status" class="status-text"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
